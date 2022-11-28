@@ -1,10 +1,11 @@
 package com.android.front_vs_back;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class LodingActivity extends Activity {
+public class LoadingActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,8 @@ public class LodingActivity extends Activity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(intent);
                 finish();
             }
         }, 2000);
