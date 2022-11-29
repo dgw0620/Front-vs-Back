@@ -13,7 +13,7 @@ public class Activity_twelve extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_twelve);
 
 
         RadioGroup radioG1 = (RadioGroup) findViewById(R.id.radioG1);
