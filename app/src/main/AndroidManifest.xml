@@ -41,6 +41,10 @@
         <activity android:name=".Activity_twelve" />
         <activity android:name=".Activity_thirteen" />
 
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".LastLoadingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
     </application>
 
 </manifest>
