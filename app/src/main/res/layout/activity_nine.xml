@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="9. 1 더하기 1은?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="귀요미"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="2"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>

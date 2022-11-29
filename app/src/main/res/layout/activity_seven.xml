@@ -10,12 +10,12 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/test"/>
+        android:layout_height="232dp"
+        android:src="@drawable/terminal" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="7. 이 화면을 보고 드는 생각은?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="잘 모르겠다. 얼른 닫는다."
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="해커 빙의한다. 나 좀 멋있는듯?"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>

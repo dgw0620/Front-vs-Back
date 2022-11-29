@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="2. 조별 과제에서 당신의 역할은?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="정리된 자료로 ppt 만들기 (진정해.. 발표는 안시킬게요..?)"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="자료조사 및 정리"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>

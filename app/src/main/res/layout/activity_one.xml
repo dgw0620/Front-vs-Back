@@ -10,12 +10,13 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/test"/>
+        android:layout_height="309dp"
+        android:src="@drawable/door" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="1. 배가 아파서 화장실에 간 당신, 눈앞에 보이는 문고리의 모습" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +26,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="신경 쓰인다."
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="이게 왜? 잠기기만 하면 된다."
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>

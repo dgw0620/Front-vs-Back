@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="10. SNS에 글, 사진을 올리면,"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="알람을 수시로 확인한다."
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="올리고 끝!"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>

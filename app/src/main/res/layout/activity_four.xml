@@ -10,12 +10,12 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/test"/>
+        android:layout_height="324dp"
+        android:src="@drawable/text" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트입니다."/>
+        android:text="4. 무슨 색인가요?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="노랑"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testtesttest"
+            android:text="파랑"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
