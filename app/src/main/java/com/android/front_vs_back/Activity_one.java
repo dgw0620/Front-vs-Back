@@ -15,7 +15,7 @@ public class Activity_one extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_one);
         setTitle("Front VS Back");
 
         RadioGroup radioG1 = (RadioGroup) findViewById(R.id.radioG1);
@@ -47,18 +47,18 @@ public class Activity_one extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Count count = (Count) getApplication();
-                Intent intent = new Intent(getApplicationContext(),Activity_two.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_two.class);
 
                 if(radioBtn1.isChecked() == false && radioBtn2.isChecked() == false) {
                     Toast.makeText(getApplicationContext(),"항목을 선택해주세요",Toast.LENGTH_SHORT).show();
                 }
                 else if(radioBtn1.isChecked()){
-                    count.setFront(count.getFront()+1);
+                    count.setFront(count.getFront() + 1);
                     Toast.makeText(getApplicationContext(),"1번 "+count.getFront(),Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 }
                 else if(radioBtn2.isChecked()){
-                    count.setBack(count.getBack()+1);
+                    count.setBack(count.getBack() + 1);
                     Toast.makeText(getApplicationContext(),"2번 "+count.getBack(),Toast.LENGTH_SHORT).show();
                     startActivity(intent);
 

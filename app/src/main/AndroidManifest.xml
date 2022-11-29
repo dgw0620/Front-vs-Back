@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FrontvsBack"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:name=".Count">
 
         <activity android:name=".LoadingActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
@@ -26,6 +27,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".Activity_one" />
         <activity android:name=".Activity_two" />
         <activity android:name=".Activity_three" />
         <activity android:name=".Activity_four" />

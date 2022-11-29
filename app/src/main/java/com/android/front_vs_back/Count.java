@@ -23,6 +23,4 @@ public class Count extends Application {
         this.back = back;
     }
 
-
-
 }

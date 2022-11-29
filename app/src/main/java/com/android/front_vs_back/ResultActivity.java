@@ -23,18 +23,23 @@ public class ResultActivity extends Activity {
         // -5< front - back < 5 = full -4 ~ 4 / 5, 8 / 6, 7 / 7, 6 / 8, 5 /
         Count count = (Count) getApplication();
 
-        if(count.getFront() - count.getBack() >= 5) {
-            imageResult.setImageResource();
-            imageResultText.setImageResource();
-        }
-        else if(count.getFront() - count.getBack() <= 5) {
-            imageResult.setImageResource();
-            imageResultText.setImageResource();
-        }
-        else {
-            imageResult.setImageResource();
-            imageResultText.setImageResource();
-        }
+        /**
+         *  Front, Back 결과 내용 출력
+         *  아직 미구현이므로 임시 주석
+         */
+
+//        if(count.getFront() - count.getBack() >= 5) {
+//            imageResult.setImageResource();
+//            imageResultText.setImageResource();
+//        }
+//        else if(count.getFront() - count.getBack() <= 5) {
+//            imageResult.setImageResource();
+//            imageResultText.setImageResource();
+//        }
+//        else {
+//            imageResult.setImageResource();
+//            imageResultText.setImageResource();
+//        }
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
