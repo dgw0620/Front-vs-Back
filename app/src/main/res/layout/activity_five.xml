@@ -10,8 +10,8 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/test"/>
+        android:layout_height="269dp"
+        android:src="@drawable/front_vs_back" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
