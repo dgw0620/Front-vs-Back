@@ -67,4 +67,18 @@ public class Activity_seven extends Activity {
 
 
     }
+
+    private long time = 0;
+    @Override
+    public void onBackPressed() {
+        if(System.currentTimeMillis() > time + 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(),"\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(System.currentTimeMillis() <= time + 2000) {
+            finishAffinity();
+        }
+    }
 }
