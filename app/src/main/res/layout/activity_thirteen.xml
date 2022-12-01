@@ -12,39 +12,43 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:src="@drawable/star" />
+        android:src="@drawable/star"
+        android:layout_margin="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:textSize="25dp"
+        android:textSize="22dp"
         android:textColor="#ffffff"
-        android:text="13. 사람들이 주목할 때"/>
+        android:text="13. 사람들이 주목할 때"
+        android:fontFamily="@font/dunggeunmo"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioG1"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="15dp"
         android:layout_gravity="left">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="솔직히 즐긴다. 짜릿해"
-            android:textSize="20dp"
+            android:text=" 솔직히 즐긴다. 짜릿해"
+            android:textSize="18dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:id="@+id/radioBtn1"/>
+            android:id="@+id/radioBtn1"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="으으 부담스러워~~"
-            android:textSize="20dp"
+            android:text=" 으으 부담스러워~~"
+            android:textSize="18dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:id="@+id/radioBtn2"/>
+            android:id="@+id/radioBtn2"
+            android:fontFamily="@font/dunggeunmo"/>
 
     </RadioGroup>
 

@@ -12,14 +12,16 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:src="@drawable/band" />
+        android:src="@drawable/band"
+        android:layout_margin="15dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="22dp"
         android:textColor="#ffffff"
         android:layout_margin="10dp"
-        android:text="6. 밴드에 들어가기로 했어요. (실력은 동일하다고 했을 때)"/>
+        android:text="6. 밴드에 들어가기로 했어요. (실력은 동일하다고 했을 때)"
+        android:fontFamily="@font/dunggeunmo"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -31,20 +33,22 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="보컬 할래."
+            android:text=" 보컬 할래."
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:textSize="20dp"
-            android:id="@+id/radioBtn1"/>
+            android:textSize="18dp"
+            android:id="@+id/radioBtn1"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:textSize="20dp"
-            android:text="베이스기타 할래."
-            android:id="@+id/radioBtn2"/>
+            android:textSize="18dp"
+            android:text=" 베이스기타 할래."
+            android:id="@+id/radioBtn2"
+            android:fontFamily="@font/dunggeunmo"/>
 
     </RadioGroup>
 

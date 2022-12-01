@@ -12,14 +12,16 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:src="@drawable/front_vs_back" />
+        android:src="@drawable/front_vs_back"
+        android:layout_margin="15dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:textSize="25dp"
+        android:textSize="22dp"
         android:textColor="#ffffff"
         android:layout_margin="10dp"
-        android:text="5. 운명적인 이끌림이 느껴지는 것은? 없다면 눈을 감고 찍어보세요!"/>
+        android:text="5. 운명적인 이끌림이 느껴지는 것은? 없다면 눈을 감고 찍어보세요!"
+        android:fontFamily="@font/dunggeunmo"/>
 
 
     <RadioGroup
@@ -27,26 +29,29 @@
         android:layout_height="wrap_content"
         android:id="@+id/radioG1"
         android:layout_gravity="left"
+        android:layout_margin="10dp"
         >
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:layout_marginTop="10dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
             android:text="컬러풀한 화면을 보며 사용자가 보기 좋고 편리하게 정보 배치하기"
-            android:id="@+id/radioBtn1"/>
+            android:id="@+id/radioBtn1"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
             android:text="흑백으로 이루어진 데이터베이스에서 원하는 정보만 쏙 뽑아내서 정리하기"
-            android:id="@+id/radioBtn2"/>
+            android:id="@+id/radioBtn2"
+            android:fontFamily="@font/dunggeunmo"/>
 
     </RadioGroup>
 

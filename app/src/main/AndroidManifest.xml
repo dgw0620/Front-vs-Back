@@ -42,7 +42,7 @@
         <activity android:name=".Activity_thirteen" />
 
         <activity android:name=".ResultActivity" />
-        <activity android:name=".LastLoadingActivity"
+        <activity android:name=".ResultLoadingActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
     </application>

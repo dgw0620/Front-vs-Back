@@ -26,7 +26,7 @@ public class Activity_thirteen extends Activity {
             @Override
             public void onClick(View view) {
                 Count count = (Count) getApplication();
-                Intent intent = new Intent(getApplicationContext(),LastLoadingActivity.class);
+                Intent intent = new Intent(getApplicationContext(),ResultLoadingActivity.class);
 
                 if(radioBtn1.isChecked() == false && radioBtn2.isChecked() == false) {
                     Toast.makeText(getApplicationContext(),"항목을 선택해주세요",Toast.LENGTH_SHORT).show();

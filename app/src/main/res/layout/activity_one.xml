@@ -12,39 +12,44 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:src="@drawable/door" />
+        android:src="@drawable/door"
+        android:layout_margin="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="22dp"
         android:textColor="#ffffff"
         android:layout_margin="10dp"
-        android:text="1. 배가 아파서 화장실에 간 당신, 눈앞에 보이는 문고리의 모습" />
+        android:text="1. 배가 아파서 화장실에 간 당신,  눈앞에 보이는 문고리의 모습"
+        android:fontFamily="@font/dunggeunmo"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioG1"
-        android:layout_gravity="left">
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="신경 쓰인다."
-            android:textSize="20dp"
+            android:text=" 신경 쓰인다."
+            android:textSize="18dp"
             android:buttonTint="#ffffff"
             android:textColor="#ffffff"
-            android:id="@+id/radioBtn1"/>
+            android:id="@+id/radioBtn1"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:text="이게 왜? 잠기기만 하면 된다."
-            android:id="@+id/radioBtn2"/>
+            android:text=" 이게 왜? 잠기기만 하면 된다."
+            android:id="@+id/radioBtn2"
+            android:fontFamily="@font/dunggeunmo"/>
 
     </RadioGroup>
 

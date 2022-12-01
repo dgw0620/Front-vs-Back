@@ -12,13 +12,15 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/groupactivity"/>
+        android:src="@drawable/groupactivity"
+        android:layout_margin="15dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:textColor="#ffffff"
-        android:textSize="25dp"
-        android:text="2. 조별 과제에서 당신의 역할은?"/>
+        android:textSize="22dp"
+        android:text="2. 조별 과제에서 당신의 역할은?"
+        android:fontFamily="@font/dunggeunmo"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -29,24 +31,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="정리된 자료로 ppt 만들기 (진정해.. 발표는 안시킬게요..?)"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textColor="#ffffff"
             android:buttonTint="#ffffff"
 
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:id="@+id/radioBtn1"/>
+            android:id="@+id/radioBtn1"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="자료조사 및 정리"
-            android:textSize="20dp"
+            android:text=" 자료조사 및 정리"
+            android:textSize="18dp"
             android:buttonTint="#ffffff"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textColor="#ffffff"
-            android:id="@+id/radioBtn2"/>
+            android:id="@+id/radioBtn2"
+            android:fontFamily="@font/dunggeunmo"/>
 
     </RadioGroup>
 
