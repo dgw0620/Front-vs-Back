@@ -4,33 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_six"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="302dp"
+        android:layout_height="300dp"
         android:src="@drawable/band" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
         android:text="6. 밴드에 들어가기로 했어요. (실력은 동일하다고 했을 때)"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="left">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="보컬 할래."
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
+            android:textSize="20dp"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
+            android:textSize="20dp"
             android:text="베이스기타 할래."
             android:id="@+id/radioBtn2"/>
 
@@ -40,6 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

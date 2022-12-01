@@ -4,35 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_eleven"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="291dp"
+        android:layout_height="300dp"
         android:src="@drawable/sympathy" />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="11. 고민하는 친구가 있을 때 당신은,"/>
+        android:layout_height="70dp"
+        android:text="11. 고민하는 친구가 있을 때 당신은,"
+        android:textSize="25dp"
+        android:textColor="#ffffff"/>
+
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="공감해준다"
-            android:id="@+id/radioBtn1"/>
+            android:id="@+id/radioBtn1"
+            android:textSize="20dp"
+            android:buttonTint="#ffffff"
+            android:textColor="#ffffff"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="해답을 찾아준다."
-            android:id="@+id/radioBtn2"/>
+            android:id="@+id/radioBtn2"
+            android:textSize="20dp"
+            android:buttonTint="#ffffff"
+            android:textColor="#ffffff"/>
 
     </RadioGroup>
 
@@ -40,6 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
-        android:id="@+id/btnNext"/>
+        android:id="@+id/btnNext"
+        android:textSize="20dp"
+        android:background="#99ccff"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>

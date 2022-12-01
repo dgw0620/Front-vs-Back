@@ -4,34 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_twelve"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="352dp"
+        android:layout_height="300dp"
         android:src="@drawable/art" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
         android:text="12. 미적 감각이 있다는 이야기를 종종 듣는다."/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="left">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="YES"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NO"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
@@ -40,6 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

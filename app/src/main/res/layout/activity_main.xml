@@ -4,26 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#000022">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="220dp"
-        android:layout_weight="0"
         android:text="Front vs Back"
-        android:textSize="34sp" />
+        android:textColor="#ffffff"
+        android:textSize="40dp" />
 
     <Button
         android:id="@+id/startBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:padding="10dp"
         android:text="시작하기" />
 
 </LinearLayout>

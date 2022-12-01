@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultActivity extends Activity {
@@ -16,7 +17,9 @@ public class ResultActivity extends Activity {
         setContentView(R.layout.activity_result);
 
         ImageView imageResult = (ImageView) findViewById(R.id.imageResult);
-        ImageView imageResultText = (ImageView) findViewById(R.id.imageResultText);
+        TextView textResult1 = (TextView) findViewById(R.id.textResult1);
+        TextView textResult2 = (TextView) findViewById(R.id.textResult2);
+
         Button btnBack = (Button) findViewById(R.id.btnBack);
 
         // front - back >=  5 = front 9 4
@@ -29,25 +32,50 @@ public class ResultActivity extends Activity {
          *  아직 미구현이므로 임시 주석
          */
 
-//        if(count.getFront() - count.getBack() >= 5) {
-//            imageResult.setImageResource();
-//            imageResultText.setImageResource();
-//        }
-//        else if(count.getFront() - count.getBack() <= 5) {
-//            imageResult.setImageResource();
-//            imageResultText.setImageResource();
-//        }
-//        else {
-//            imageResult.setImageResource();
-//            imageResultText.setImageResource();
-//        }
+        String front1 = "디자이너 갬성 물씬~ 완벽 주의자 프론트엔드";
+        String front2 = "1px에 집착하고 자간에 집착하는 당신. 완벽한 레이아웃이 아니면 개발을 시작할 수 없어 ! " +
+                "대칭 균형 딱딱 맞는 사이트를 완벽하게 구현해냈을 때의 희열이란 ! " +
+                "프론트는 당신의 데스티니~ 누구보다 미적 감각이 뛰어난 당신 혹시 전생에 예술가는 아니셨는지 ? " +
+                "혼자서도 잘하는 당신이지만, 가끔은 당신의 도움을 간절히 바라는 친구들은 없는지 주변을 둘러봐주세요.";
+
+        String back1 = "나는야 API 공장장 알파고 백엔드";
+        String back2 = "갬성이 뭐죠 ? 애니메이션은 먹는 건가요 ? 디자인은 알 바 아니고 나는 내가 생각한게 맞는지가 제일 중요해 ! " +
+                "인풋. 아웃풋. 효율. 삐빅. 터미널 접속. 판다 로직. " +
+                "보낸다. 빠르게. 데이터. 삐빅. 이런 정신상태로는 안돼. 삐빅. 임무 완료. 그" +
+                "렇지만 따뜻한 마음을 가진 당신은 휴먼~ 무심한 듯 툭 던지는 진심 어린 말 한마디로 모두를 감동시키고 있는 것은 아닌지 ?";
+
+        String full1 = "놓치지 않을 거에요 ~ 문어발 풀스택";
+        String full2 = "디자인이라도 놀고 싶고 데이터랑도 놀고 싶은 당신은 욕심쟁이 우후훗 ~ " +
+                "어차피 다 하게 될거 좀 더 끌리는 걸 먼저 배워볼까나 ~ 뭘 해도 잘할 당신 ! " +
+                "지금은 내면의 목소리에 조금 더 귀를 기울여보면 어떨까요 ?";
+
+        if(count.getFront() - count.getBack() >= 5) {
+            imageResult.setImageResource(R.drawable.frontend);
+
+            textResult1.setText(front1);
+            textResult2.setText(front2);
+        }
+        else if(count.getFront() - count.getBack() <= -5) {
+            imageResult.setImageResource(R.drawable.backend);
+
+            textResult1.setText(back1);
+            textResult2.setText(back2);
+        }
+        else {
+            imageResult.setImageResource(R.drawable.fullstack);
+
+            textResult1.setText(full1);
+            textResult2.setText(full2);
+        }
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Count count = (Count) getApplication();
+                count.setBack(0);
+                count.setFront(0);
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                // finish() ?
-                // startActivity() ?
+                startActivity(intent);
             }
         });
 

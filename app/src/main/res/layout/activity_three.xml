@@ -4,34 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_three"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="318dp"
+        android:layout_height="300dp"
         android:src="@drawable/calendar" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
         android:text="3. 달력을 봤는데 뭔가 이상한 것을 발견했어요. 가장 먼저 눈에 들어오는 것은?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다른 폰트"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="중복된 날짜"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
@@ -40,6 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

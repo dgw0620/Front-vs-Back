@@ -4,27 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_eight"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="225dp"
+        android:layout_height="300dp"
         android:src="@drawable/iron" />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="8. 둘 중 한가지를 만들 수 있다면?"/>
+        android:layout_height="70dp"
+        android:text="8. 둘 중 한가지를 만들 수 있다면?"
+        android:textSize="25dp"
+        android:textColor="#ffffff"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:text="아이언맨 수트"
             android:id="@+id/radioBtn1"/>
 
@@ -32,6 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자비스 (인공지능)"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
@@ -40,6 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:textSize="20dp"
+        android:background="#99ccff"
+        android:layout_marginTop="30dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

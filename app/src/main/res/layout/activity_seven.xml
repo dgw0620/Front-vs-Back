@@ -4,27 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_seven"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="232dp"
+        android:layout_height="300dp"
         android:src="@drawable/terminal" />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         android:text="7. 이 화면을 보고 드는 생각은?"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="left">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:text="잘 모르겠다. 얼른 닫는다."
             android:id="@+id/radioBtn1"/>
 
@@ -32,6 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="해커 빙의한다. 나 좀 멋있는듯?"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
@@ -39,6 +50,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:text="NEXT"
         android:id="@+id/btnNext"/>
 

@@ -4,34 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_one"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="309dp"
+        android:layout_height="300dp"
         android:src="@drawable/door" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
         android:text="1. 배가 아파서 화장실에 간 당신, 눈앞에 보이는 문고리의 모습" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioG1">
+        android:id="@+id/radioG1"
+        android:layout_gravity="left">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="신경 쓰인다."
+            android:textSize="20dp"
+            android:buttonTint="#ffffff"
+            android:textColor="#ffffff"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
             android:text="이게 왜? 잠기기만 하면 된다."
             android:id="@+id/radioBtn2"/>
 
@@ -41,6 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

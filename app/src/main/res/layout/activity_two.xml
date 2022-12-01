@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity_two"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#000022">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -14,7 +15,9 @@
         android:src="@drawable/groupactivity"/>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         android:text="2. 조별 과제에서 당신의 역할은?"/>
 
     <RadioGroup
@@ -26,12 +29,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="정리된 자료로 ppt 만들기 (진정해.. 발표는 안시킬게요..?)"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/radioBtn1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자료조사 및 정리"
+            android:textSize="20dp"
+            android:buttonTint="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
             android:id="@+id/radioBtn2"/>
 
     </RadioGroup>
@@ -40,6 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:background="#99ccff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btnNext"/>
 
 </LinearLayout>

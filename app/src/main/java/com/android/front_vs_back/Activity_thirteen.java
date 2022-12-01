@@ -22,25 +22,6 @@ public class Activity_thirteen extends Activity {
         Button btnNext = (Button) findViewById(R.id.btnNext);
 
 
-//        radioG1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup radioGroup, int checkId) {
-//                RadioButton btn = radioGroup.findViewById(checkId);
-//                Count count = (Count) getApplication();
-//
-//                switch(checkId) {
-//                    case R.id.radioBtn1:
-//                        count.setFront(count.getFront()+1);
-//                        Toast.makeText(getApplicationContext(),"1번 "+count.getFront(),Toast.LENGTH_SHORT).show();
-//
-//                        break;
-//                    case R.id.radioBtn2:
-//                        count.setBack(count.getBack()+1);
-//                        Toast.makeText(getApplicationContext(),"2번 "+count.getBack(),Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
