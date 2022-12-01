@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/light_mode"
+        android:id="@+id/theme_mode"
         android:title="Light Mode"
         android:enabled="true" />
 

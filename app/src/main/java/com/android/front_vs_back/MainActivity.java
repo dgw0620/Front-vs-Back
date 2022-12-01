@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+    boolean theme_mode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,4 +47,33 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_option, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+
+        switch (item.getItemId()) {
+            case R.id.theme_mode:
+                if (theme_mode){
+                    item.setTitle("Light Mode");
+                    ThemeManager.applyTheme(ThemeManager.ThemeMode.DARK);
+                    theme_mode = false;
+                } else {
+                    item.setTitle("Dark Mode");
+                    ThemeManager.applyTheme(ThemeManager.ThemeMode.LIGHT);
+                    theme_mode = true;
+                }
+                return true;
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
