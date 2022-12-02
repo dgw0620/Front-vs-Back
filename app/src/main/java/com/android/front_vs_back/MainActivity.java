@@ -23,11 +23,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button startBtn = (Button) findViewById(R.id.startBtn);
+        Button resultBtn = (Button) findViewById(R.id.resultBtn);
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Count count = (Count) getApplication();
+                count.setBack(0);
+                count.setFront(0);
                 Intent intent = new Intent(getApplicationContext(), Activity_one.class);
+                startActivity(intent);
+            }
+        });
+
+        resultBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 startActivity(intent);
             }
         });
