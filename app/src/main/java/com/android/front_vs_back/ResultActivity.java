@@ -2,14 +2,24 @@ package com.android.front_vs_back;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ResultActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class ResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +31,7 @@ public class ResultActivity extends Activity {
         TextView textResult2 = (TextView) findViewById(R.id.textResult2);
 
         Button btnBack = (Button) findViewById(R.id.btnBack);
+        Button shareBtn = (Button) findViewById(R.id.shareBtn);
 
         // front - back >=  5 = front 9 4
         // front - back <= -5 = back  4 9
@@ -69,6 +80,33 @@ public class ResultActivity extends Activity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
+        });
+
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View container;
+                container = getWindow().getDecorView();
+                container.buildDrawingCache();
+                Bitmap captureView = container.getDrawingCache();
+
+                String address = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.android/FrontvsBack" + "/capture.jpeg";
+                FileOutputStream fos;
+                try {
+                    fos = new FileOutputStream(address);
+                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+//                Uri uri = Uri.fromFile(new File(address));
+//                Uri uri = FileProvider.getUriForFile(this, com.android.front_vs_back.fileprovider, new File(address));
+//                Intent shareintent = new Intent(Intent.ACTION_SEND);
+//
+//                shareintent.putExtra(Intent.EXTRA_STREAM, uri);
+//                shareintent.setType("image/*");
+//                startActivity(Intent.createChooser(shareintent, "공유"));
+           }
         });
 
     }
