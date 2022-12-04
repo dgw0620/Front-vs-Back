@@ -3,7 +3,6 @@ package com.android.front_vs_back;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,12 +14,13 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    boolean theme_mode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setElevation(0);
 
         Button startBtn = (Button) findViewById(R.id.startBtn);
         Button resultBtn = (Button) findViewById(R.id.resultBtn);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 Count count = (Count) getApplication();
                 count.setBack(0);
                 count.setFront(0);
-                Intent intent = new Intent(getApplicationContext(), Activity_one.class);
+                Intent intent = new Intent(getApplicationContext(), QuestionsActivity.class);
                 startActivity(intent);
             }
         });
@@ -68,24 +68,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
+        Count count = (Count) getApplication();
 
         switch (item.getItemId()) {
             case R.id.theme_mode:
-                if (theme_mode){
-                    item.setTitle("Light Mode");
-                    ThemeManager.applyTheme(ThemeManager.ThemeMode.DARK);
-                    theme_mode = false;
-                } else {
-                    item.setTitle("Dark Mode");
+                if (count.getMode()){
                     ThemeManager.applyTheme(ThemeManager.ThemeMode.LIGHT);
-                    theme_mode = true;
+                    count.setMode(!count.getMode());
+                } else {
+                    ThemeManager.applyTheme(ThemeManager.ThemeMode.DARK);
+                    count.setMode(!count.getMode());
                 }
                 return true;
             default:
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

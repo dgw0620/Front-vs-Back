@@ -6,12 +6,16 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
@@ -26,12 +30,15 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        getSupportActionBar().setElevation(0);
+
         ImageView imageResult = (ImageView) findViewById(R.id.imageResult);
         TextView textResult1 = (TextView) findViewById(R.id.textResult1);
         TextView textResult2 = (TextView) findViewById(R.id.textResult2);
 
         Button btnBack = (Button) findViewById(R.id.btnBack);
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
+        Button vedioBtn = (Button) findViewById(R.id.vedioBtn);
 
         // front - back >=  5 = front 9 4
         // front - back <= -5 = back  4 9
@@ -109,6 +116,26 @@ public class ResultActivity extends AppCompatActivity {
            }
         });
 
+        vedioBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+
+                if(count.getFront() - count.getBack() >= 5){
+                    intent.setData(Uri.parse("https://www.youtube.com/watch?v=bFaKx7_epvY"));
+                    startActivity(intent);
+                }
+                else if(count.getFront() - count.getBack() <= -5){
+                    intent.setData(Uri.parse("https://www.youtube.com/watch?v=8oIJ26CNPXQ"));
+                    startActivity(intent);
+                }
+
+                else{
+                    intent.setData(Uri.parse("https://www.youtube.com/watch?v=2HKO20NWE04"));
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private long time = 0;
@@ -125,5 +152,30 @@ public class ResultActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_option, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Count count = (Count) getApplication();
+
+        switch (item.getItemId()) {
+            case R.id.theme_mode:
+                if (count.getMode()){
+                    ThemeManager.applyTheme(ThemeManager.ThemeMode.LIGHT);
+                    count.setMode(!count.getMode());
+                } else {
+                    ThemeManager.applyTheme(ThemeManager.ThemeMode.DARK);
+                    count.setMode(!count.getMode());
+                }
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

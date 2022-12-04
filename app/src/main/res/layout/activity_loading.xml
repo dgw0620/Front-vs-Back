@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoadingActivity"
-    android:background="#000022">
+    android:background="@color/Background">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:text="Loading"
         android:textSize="46sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text"
         android:layout_centerInParent="true"
         android:fontFamily="@font/dunggeunmo" />
 

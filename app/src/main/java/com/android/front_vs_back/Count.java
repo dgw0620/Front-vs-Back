@@ -6,6 +6,7 @@ public class Count extends Application {
 
     private int front=0;
     private int back=0;
+    private boolean theme_mode = false;
 
     public int getFront() {
         return front;
@@ -15,6 +16,8 @@ public class Count extends Application {
         return back;
     }
 
+    public boolean getMode() { return theme_mode; }
+
     public void setFront(int front) {
         this.front = front;
     }
@@ -23,4 +26,5 @@ public class Count extends Application {
         this.back = back;
     }
 
+    public void setMode(boolean mode) { this.theme_mode = mode;}
 }
