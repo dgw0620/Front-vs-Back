@@ -1,11 +1,15 @@
 package com.android.front_vs_back;
 
 import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,9 +23,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Objects;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -97,24 +106,70 @@ public class ResultActivity extends AppCompatActivity {
                 container.buildDrawingCache();
                 Bitmap captureView = container.getDrawingCache();
 
-                String address = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.android/FrontvsBack" + "/capture.jpeg";
-                FileOutputStream fos;
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.Images.Media.DISPLAY_NAME, "capture.jpg");
+                values.put(MediaStore.Images.Media.MIME_TYPE, "image/*");
+                values.put(MediaStore.Images.Media.IS_PENDING, 1);
+
+                ContentResolver contentResolver = getContentResolver();
+                Uri collection = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
+                Uri item = contentResolver.insert(collection, values);
+
                 try {
-                    fos = new FileOutputStream(address);
-                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+                    ParcelFileDescriptor pdf = contentResolver.openFileDescriptor(item, "w", null);
+                    if (pdf == null){
+
+                    } else {
+                        InputStream inputStream = getImageInputStram(captureView);
+                        byte[] strToByte = getBytes(inputStream);
+                        FileOutputStream fos = new FileOutputStream(pdf.getFileDescriptor());
+                        fos.write(strToByte);
+                        fos.close();
+                        inputStream.close();
+                        pdf.close();
+                        contentResolver.update(item, values, null, null);
+                    }
                 } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
 
-//                Uri uri = Uri.fromFile(new File(address));
-//                Uri uri = FileProvider.getUriForFile(this, com.android.front_vs_back.fileprovider, new File(address));
-//                Intent shareintent = new Intent(Intent.ACTION_SEND);
-//
-//                shareintent.putExtra(Intent.EXTRA_STREAM, uri);
-//                shareintent.setType("image/*");
-//                startActivity(Intent.createChooser(shareintent, "공유"));
+                values.clear();
+                values.put(MediaStore.Images.Media.IS_PENDING, 0);
+                contentResolver.update(item, values, null, null);
+
+                Intent shareintent = new Intent(Intent.ACTION_SEND);
+                String path = MediaStore.Images.Media.insertImage(contentResolver, captureView, "title", null);
+                Uri uri = Uri.parse(path);
+                shareintent.putExtra(Intent.EXTRA_STREAM, uri);
+                shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                shareintent.setType("image/*");
+                startActivity(shareintent);
            }
+
+            private InputStream getImageInputStram(Bitmap bmp) {
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, bytes);
+                byte[] bitmapData = bytes.toByteArray();
+                ByteArrayInputStream bs = new ByteArrayInputStream(bitmapData);
+
+                return bs;
+            }
+
+            public byte[] getBytes(InputStream inputStream) throws IOException {
+                ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+                int bufferSize = 1024;
+                byte[] buffer = new byte[bufferSize];
+
+                int len = 0;
+                while ((len = inputStream.read(buffer)) != -1) {
+                    byteBuffer.write(buffer, 0, len);
+                }
+                return byteBuffer.toByteArray();
+            }
         });
+
 
         vedioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
