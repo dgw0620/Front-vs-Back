@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button startBtn = (Button) findViewById(R.id.startBtn);
         Button resultBtn = (Button) findViewById(R.id.resultBtn);
+        Button makerBtn = (Button)  findViewById(R.id.makerBtn);
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        makerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyDialog dlg = new MyDialog(MainActivity.this);
+                dlg.callDialog();
+            }
+        });
+
     }
 
     private long time = 0;
