@@ -121,32 +121,4 @@ public class QuestionsActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_option, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Count count = (Count) getApplication();
-
-        switch (item.getItemId()) {
-            case R.id.theme_mode:
-                if (count.getMode()){
-                    item.setTitle("Light Mode");
-                    ThemeManager.applyTheme(ThemeManager.ThemeMode.LIGHT);
-                    count.setMode(!count.getMode());
-                } else {
-                    item.setTitle("Dark Mode");
-                    ThemeManager.applyTheme(ThemeManager.ThemeMode.DARK);
-                    count.setMode(!count.getMode());
-                }
-                break;
-            default:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
