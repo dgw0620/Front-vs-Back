@@ -67,7 +67,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Count count = (Count) getApplication();
-                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ResultLoadingActivity.class);
 
 
                     if(index != 12) {
@@ -92,7 +92,6 @@ public class QuestionsActivity extends AppCompatActivity {
                         } else if (radioBtnFirst[index].isChecked()) {
                             count.setFront(count.getFront()+1);
                             Toast.makeText(getApplicationContext(), "1번 " + count.getFront(), Toast.LENGTH_SHORT).show();
-
                             startActivity(intent);
                         } else if (radioBtnSecond[index].isChecked()) {
                             count.setBack(count.getBack()+1);

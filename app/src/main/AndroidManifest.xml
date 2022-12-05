@@ -42,8 +42,7 @@
         </activity>
         <activity android:name=".QuestionsActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".ResultLoadingActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".ResultLoadingActivity" />
 
     </application>
 
