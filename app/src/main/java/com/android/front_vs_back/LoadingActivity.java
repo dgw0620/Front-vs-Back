@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 public class LoadingActivity extends Activity {
     @Override
@@ -16,6 +17,7 @@ public class LoadingActivity extends Activity {
 
     private void startLoading() {
         Handler handler = new Handler();
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
