@@ -75,11 +75,9 @@ public class QuestionsActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "항목을 선택해주세요", Toast.LENGTH_SHORT).show();
                         } else if (radioBtnFirst[index].isChecked()) {
                             count.setFront(count.getFront()+1);
-                            Toast.makeText(getApplicationContext(), "1번 " + count.getFront(), Toast.LENGTH_SHORT).show();
                             viewFlipper.showNext();
                         } else if (radioBtnSecond[index].isChecked()) {
                             count.setBack(count.getBack()+1);
-                            Toast.makeText(getApplicationContext(), "2번 " + count.getBack(), Toast.LENGTH_SHORT).show();
                             viewFlipper.showNext();
                         }
                     }
@@ -91,11 +89,9 @@ public class QuestionsActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "항목을 선택해주세요", Toast.LENGTH_SHORT).show();
                         } else if (radioBtnFirst[index].isChecked()) {
                             count.setFront(count.getFront()+1);
-                            Toast.makeText(getApplicationContext(), "1번 " + count.getFront(), Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         } else if (radioBtnSecond[index].isChecked()) {
                             count.setBack(count.getBack()+1);
-                            Toast.makeText(getApplicationContext(), "2번 " + count.getBack(), Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         }
                     }
